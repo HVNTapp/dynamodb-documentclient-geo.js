@@ -383,7 +383,7 @@ var GeoDataManager = /** @class */ (function () {
         var _this = this;
         var latLngRect = S2Util_1.S2Util.latLngRectFromQueryRectangleInput(geoQueryInput);
         return list.filter(function (item) {
-            var geoJson = item[_this.config.geoJsonAttributeName].S;
+            var geoJson = item[_this.config.geoJsonAttributeName];
             var coordinates = JSON.parse(geoJson).coordinates;
             var longitude = coordinates[_this.config.longitudeFirst ? 0 : 1];
             var latitude = coordinates[_this.config.longitudeFirst ? 1 : 0];
